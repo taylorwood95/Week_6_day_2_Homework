@@ -71,5 +71,20 @@ Park.prototype.removeAllSpecies = function () {
    return findDinoSpecies
 }
 
+Park.prototype.totalDietType = function() {
+    // console.log(this.dinosaurs)
+    let totalDiet = {}
+    for (const dino of this.dinosaurs){
+        // console.log(dino)
+        if(dino.diet in totalDiet){
+            totalDiet[dino.diet] += 1
+        } else {
+            totalDiet[dino.diet] = 1
+        }
+    }
+
+    return totalDiet
+}
+
 
 module.exports = Park

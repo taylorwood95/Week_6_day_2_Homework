@@ -98,4 +98,17 @@ describe('Park', function() {
     assert.deepStrictEqual(park.removeAllSpecies(), [])
   })
 
+  it('should be able to sum up number of dinosaurs depending on diet type', function(){
+    park.addDinosaur(trex1)
+    park.addDinosaur(trex2)
+    park.addDinosaur(trex3)
+    park.addDinosaur(diplodocus)
+    assert.deepStrictEqual(park.totalDietType(), {'carnivore': 3, 'herbivore': 1})
+
+  })
+
 });
+
+
+// Provide an object containing each of the diet types and the number of dinosaurs in the park of that diet type
+// Example: { 'carnivore': 5, 'herbivore': 2, 'omnivore': 1 }
