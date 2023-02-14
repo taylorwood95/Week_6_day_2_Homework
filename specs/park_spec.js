@@ -91,4 +91,11 @@ describe('Park', function() {
     assert.strictEqual(park.totalRevenuePerYear(), 7300)
   });
 
+  it('should be able to remove all dinosaurs of a certain species', function() {
+    park.addDinosaur(trex1);
+    park.addDinosaur(trex2);
+    park.addDinosaur(trex3);
+    assert.deepStrictEqual(park.removeAllSpecies(), [])
+  })
+
 });

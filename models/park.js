@@ -61,5 +61,15 @@ Park.prototype.totalRevenuePerYear = function () {
     return this.ticketPrice * 365
 }
 
+Park.prototype.removeAllSpecies = function () {
+    const findDinoSpecies = []
+    for (const dino of this.dinosaurs){
+        if(dino.species === 't-rex'){
+            findDinoSpecies.splice(0, this.dinosaurs.length)
+        }
+    }
+   return findDinoSpecies
+}
+
 
 module.exports = Park
